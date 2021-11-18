@@ -18,7 +18,7 @@ for i in (link):
         x.streams.filter(progressive="true")
 
         # Downloading first quality video
-        x.streams.first().download(save_path)
+        x.streams.get_highest_resolution().download(save_path)
 
         print('Finished downloading ' + x.title)
 
